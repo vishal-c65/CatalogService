@@ -23,7 +23,7 @@ public class BaseController {
     @Autowired
     private SongsRepository songsRepository;
 
-    @RequestMapping(value = "songsId/{song_id}",
+    @RequestMapping(value = "songs/{song_id}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getSong(@PathVariable("song_id") String songIdentifier, ModelMap model) {
